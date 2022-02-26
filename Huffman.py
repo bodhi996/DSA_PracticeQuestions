@@ -25,6 +25,11 @@ def Huffman(s):
         l=sorted(l, key=lambda x: x.frequency)
         left=l[0]
         right=l[1]
+        if left.frequency==right.frequency:
+            if left.symbol> right.symbol:
+                temp=left
+                left=right
+                right=temp
         left.huff='0'
         right.huff='1'
         newNode=Node(left.frequency+right.frequency,left.symbol+right.symbol,left,right)
