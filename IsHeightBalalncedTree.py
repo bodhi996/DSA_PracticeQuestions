@@ -1,6 +1,4 @@
-def counter():
-    counter.c=0    
-def height(node):
+ def height(node):
     if node==None:
         return 0
     lh=height(node.left)+1
