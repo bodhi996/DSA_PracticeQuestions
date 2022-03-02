@@ -1,5 +1,5 @@
-def counter(c):
-    global c=0    
+def counter():
+    counter.c=0    
 def height(node):
     if node==None:
         return 0
@@ -10,12 +10,13 @@ def Vheight(node,b):
     if node==None:
         return 
     if abs(height(node.left) - height(node.right)) > 1:
-        b=False
-        Vheight(node,b)
-        print(b) 
+        Vheight.b='False' 
     Vheight(node.left,b)
     Vheight(node.right,b)
 def IsTreeBalanced(node):
-    print(c)
+    b=True
     Vheight(node,b)
-    print(b)
+    if hasattr(Vheight,'b'):
+        return False
+    else:
+        return True
