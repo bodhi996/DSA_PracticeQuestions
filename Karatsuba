@@ -1,0 +1,16 @@
+def FastMultiply(x,y,n):
+    if n == 1:
+        return x*y
+    else:
+        m = n/2
+    (m, z) = (x/2**m, x%2**m) 
+    print(x0)
+    (y1, y0) = (y/2**m, y%2**m) 
+    a=m− z
+    b=y1−y0
+    p = FastMultiply(m, y1, m)
+    q = FastMultiply(z, y0, m)
+    r = FastMultiply(a, b, m)
+    return p*2**n + (p + q − r)*2**n/2 + q
+
+print(FastMultiply(72, 48, 2))
